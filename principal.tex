@@ -1,0 +1,27 @@
+\documentclass[11pt, twoside]{book}
+\input{prefix}  % Place all packages and function definitions in the prefix file
+
+\begin{document}
+% Do not add page numbers
+\pagenumbering{gobble}
+\input{chapters/00_title_page/title_page}
+
+\tableofcontents
+    % Start page number on abstract
+    \cleardoublepage
+    \pagenumbering{arabic}
+    \input{chapters/01_abstract/abstract}
+    \input{chapters/02_introduction/introduction}
+    \input{chapters/03_objectives/objectives}
+    \input{chapters/04_materials_and_methods/materials_and_methods}
+    \input{chapters/05_results/results}
+    \input{chapters/06_discussion/discussion}
+    \input{chapters/07_conclusions/conclusions}
+    % Stop page number after last numbered chapter
+    \cleardoublepage
+    \pagenumbering{gobble}
+    \input{chapters/08_references/references}
+    \input{chapters/90_appendix_i/appendix_i}
+    \input{chapters/91_appendix_ii/appendix_ii}
+
+\end{document}

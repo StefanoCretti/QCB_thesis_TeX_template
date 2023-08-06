@@ -1,0 +1,24 @@
+#!/bin/sh
+
+build() {
+    pdflatex -halt-on-error -output-directory=./build $1
+}
+
+bibliography() {
+    NAME="$(echo $1 | sed 's/\.tex//g')"
+    bibtex "./build/$NAME.aux" < "./biblio.bib"
+}
+
+file=$(basename "$1")
+path=$(dirname "$1")
+cd "$path"
+build $file
+errcode=$?
+
+bibliography $file
+
+if [ $errcode = 0 ]; then
+    build $file >/dev/null 2>/dev/null
+    build $file >/dev/null 2>/dev/null
+fi
+

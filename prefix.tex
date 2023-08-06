@@ -1,0 +1,82 @@
+% General packages
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+
+% Set page layout
+\usepackage[
+  a4paper,
+  includehead,       % Header is within page margins
+  headheight=0.6cm,  % Always present (regardless of text)
+  inner=2.5cm,
+  outer=1.5cm,
+  top=2cm, 
+  bottom=2cm
+  ]{geometry}
+
+% Suppress default required title
+\renewcommand\maketitle{}
+
+% To set line spacing to 1
+\usepackage{setspace}
+\singlespacing
+
+% To use .eps logo in title page
+\usepackage{epsfig}  
+
+% Some generally useful packages that you may or may not need
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage[toc, page]{appendix}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{multicol}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{tcolorbox}
+
+% Math packages
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{dsfont}
+\usepackage{mathtools}
+
+% Some general page settings from 
+% https://github.com/giacThePhantom/MolecularPhysics
+\pagestyle{fancy}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+% avoid indentation and preserve new lines from Markdown
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+
+\fancyhf{}
+\lhead{\rightmark}
+\cfoot{\leftmark}
+\rfoot{\thepage}
+
+\setcounter{secnumdepth}{5}
+
+\lstset{
+    frame=tb, % draw a frame at the top and bottom of the code block
+    tabsize=4, % tab space width
+    showstringspaces=false, % don't mark spaces in strings
+    numbers=none, % display line numbers on the left
+    commentstyle=\color{green}, % comment color
+    keywordstyle=\color{red}, % keyword color
+    stringstyle=\color{blue}, % string color
+    breaklines=true,
+    postbreak=\mbox{\textcolor{green}{$\hookrightarrow$}\space}
+}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
