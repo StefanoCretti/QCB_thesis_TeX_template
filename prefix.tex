@@ -35,7 +35,7 @@
 \usepackage{makecell}
 \usepackage{multicol}
 \usepackage{soul}
-\usepackage{textcomp}
+%\usepackage{textcomp} % commented due to clash
 \usepackage{wrapfig}
 \usepackage{xcolor}
 \usepackage{graphicx}
@@ -48,11 +48,15 @@
 \usepackage{dsfont}
 \usepackage{mathtools}
 
+% Set font to Times New Roman
+\usepackage{newtxtext}  % Times-like text font
+\usepackage{newtxmath}  % Times-like math font
+
 % Some general page settings from 
 % https://github.com/giacThePhantom/MolecularPhysics
 \pagestyle{fancy}
 
-\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\familydefault}{\sfdefault} %% this line prevents the conversion to Times New Roman, as it changes the default font family to serif
 
 % avoid indentation and preserve new lines from Markdown
 \setlength{\parindent}{0pt}
